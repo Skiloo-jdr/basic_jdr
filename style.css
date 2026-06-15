@@ -2,79 +2,116 @@ body {
   margin: 0;
   font-family: Georgia, serif;
 
-  /* fond parchemin simple et fiable */
-  background: #1a1410;
+  /* 🕯️ table sombre autour du livre */
+  background: radial-gradient(circle at center, #2a201a, #0e0b08);
   color: #2a1d12;
 }
 
-/* CONTENEUR = page grimoire */
+/* 📖 PAGE = livre ouvert */
 .container {
   max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
+  margin: 60px auto;
+  padding: 40px;
 
-  background: #f3e6c8;
+  background: #f4e7c9; /* parchemin */
+  border-radius: 14px;
+
   border: 2px solid #b08a55;
-  border-radius: 12px;
 
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  /* effet livre posé */
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.7),
+    inset 0 0 40px rgba(0,0,0,0.08);
+
+  position: relative;
 }
 
-/* HERO */
+/* 📜 léger effet “papier ancien” */
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(120, 80, 40, 0.15);
+  pointer-events: none;
+}
+
+/* ✨ HERO style titre de chapitre */
 .hero {
   text-align: center;
-  padding: 50px 20px;
+  padding: 50px 20px 20px 20px;
   color: #f3e6c8;
 }
 
 .hero h1 {
+  font-size: 3rem;
+  letter-spacing: 3px;
   margin: 0;
-  font-size: 2.8rem;
-  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(255, 200, 120, 0.2);
 }
 
 .hero p {
-  color: #cbb89a;
+  color: #d6c3a5;
   font-style: italic;
 }
 
-/* BLOCS */
+/* 📚 sections comme pages internes */
 .intro {
-  background: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.55);
   border-left: 4px solid #a67c3b;
+
   padding: 15px;
-  margin: 20px 0;
+  margin: 18px 0;
+
   border-radius: 6px;
 }
 
-/* TITRES */
+/* 📖 titres anciens */
 h2 {
   color: #3a2415;
+  margin-top: 0;
 }
 
-/* CARTES */
+/* 🧭 cartes en ligne (toujours propre) */
 .grid {
   display: flex;
-  gap: 15px;
+  gap: 16px;
+  margin-top: 25px;
 }
 
 .card {
   flex: 1;
-  background: rgba(255,255,255,0.6);
+
+  background: rgba(255,255,255,0.7);
   border: 1px solid #b08a55;
-  padding: 15px;
-  border-radius: 10px;
+  border-radius: 12px;
+
+  padding: 18px;
+
   text-decoration: none;
   color: #2a1d12;
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+
+  transition: 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-/* FOOTER */
+/* 🔙 lien retour */
+.card[href] {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* 📜 footer discret */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   color: #cbb89a;
+  font-size: 0.9rem;
 }
