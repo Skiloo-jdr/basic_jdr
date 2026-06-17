@@ -115,3 +115,23 @@ footer {
   color: #cbb89a;
   font-size: 0.9rem;
 }
+
+.characteristics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.characteristics-grid div,
+.characteristics-grid h4 {
+    background: rgba(255,255,255,0.35);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+blockquote {
+    border-left: 4px solid #a67c3b;
+    padding-left: 15px;
+    font-style: italic;
+    color: #5a4632;
+}
