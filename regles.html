@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Règles - Codex JDR</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="site-title">🎲 Codex JDR</a>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="regles.html" class="active">📜 Règles</a></li>
+                <li><a href="magie.html">✨ Magie</a></li>
+                <li><a href="lore.html">🗺️ Lore</a></li>
+                <li><a href="bestiaire.html">🐉 Bestiaire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <input type="text" placeholder="🔍 Filtrer les règles..." onkeyup="filterContent(this.value)">
+            <ul>
+                <li><a href="#combat">Tour de Combat</a></li>
+                <li><a href="#jets">Jets & Difficultés</a></li>
+                <li><a href="#soins">Soins & Repos</a></li>
+                <li><a href="#etats">États & Conditions</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h1>Règles Générales</h1>
+
+            <section id="combat">
+                <h2>Tour de Combat</h2>
+                <p>Le combat se déroule en tours successifs par ordre d'<strong>Initiative</strong> (D20 + Modificateur d'Agilité).</p>
+                <ul>
+                    <li><strong>Action Principale :</strong> Attaquer, lancer un sort, utiliser une compétence.</li>
+                    <li><strong>Mouvement :</strong> Déplacement égal à votre vitesse de base.</li>
+                    <li><strong>Action Bonus :</strong> Action rapide spécifique (ex: coup de dague secondaire).</li>
+                    <li><strong>Réaction :</strong> 1 par tour (ex: Attaque d'opportunité).</li>
+                </ul>
+            </section>
+
+            <section id="jets">
+                <h2>Jets de Dés & Seuil de Difficulté (DD)</h2>
+                <p>Formule globale : <code>D20 + Caractéristique + Maîtrise</code> vs <code>DD Target</code></p>
+                <div>
+                    <span class="badge">DD 10</span> Très Facile |
+                    <span class="badge">DD 15</span> Moyen |
+                    <span class="badge danger">DD 20</span> Difficile |
+                    <span class="badge danger">DD 25+</span> Légendaire
+                </div>
+            </section>
+
+            <section id="soins">
+                <h2>Soins & Repos</h2>
+                <p><strong>Repos Court (1 heure) :</strong> Permet d'investir des dés de vie pour regagner des PV.</p>
+                <p><strong>Repos Long (8 heures) :</strong> Restaure la totalité des PV et des emplacements de sorts max (1 fois par 24h).</p>
+            </section>
+
+            <section id="etats">
+                <h2>États & Conditions</h2>
+                <p><strong>Empoisonné :</strong> Désavantage sur les jets d'attaque et de caractéristique.</p>
+                <p><strong>Étourdi :</strong> Ne peut plus entreprendre d'actions et rate automatiquement ses sauvegardes de Force/Agilité.</p>
+            </section>
+        </main>
+    </div>
+
+    <script>
+    function filterContent(q) {
+        let text = q.toLowerCase();
+        document.querySelectorAll('.content section').forEach(sec => {
+            sec.style.display = sec.textContent.toLowerCase().includes(text) ? 'block' : 'none';
+        });
+    }
+    </script>
+</body>
+</html>

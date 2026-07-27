@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bestiaire - Codex JDR</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="site-title">🎲 Codex JDR</a>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="regles.html">📜 Règles</a></li>
+                <li><a href="magie.html">✨ Magie</a></li>
+                <li><a href="lore.html">🗺️ Lore</a></li>
+                <li><a href="bestiaire.html" class="active">🐉 Bestiaire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <input type="text" placeholder="🔍 Filtrer le bestiaire..." onkeyup="filterContent(this.value)">
+            <ul>
+                <li><a href="#gobelin">Gobelin des Cavernes</a></li>
+                <li><a href="#loup-ombre">Loup d'Ombre</a></li>
+                <li><a href="#golem-pierre">Golem de Pierre</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h1>Bestiaire & Créatures</h1>
+
+            <section id="gobelin">
+                <h2>Gobelin des Cavernes <span class="badge">FP 1/4</span></h2>
+                <div class="stat-block">
+                    <div class="stat-item"><span class="label">PV</span><span class="value">7 (2d6)</span></div>
+                    <div class="stat-item"><span class="label">CA</span><span class="value">15</span></div>
+                    <div class="stat-item"><span class="label">Vitesse</span><span class="value">9 m</span></div>
+                    <div class="stat-item"><span class="label">FOR</span><span class="value">8 (-1)</span></div>
+                    <div class="stat-item"><span class="label">DEX</span><span class="value">14 (+2)</span></div>
+                </div>
+                <p><strong>Fuite Agile :</strong> Le gobelin peut se désengager ou se cacher en action bonus.</p>
+                <p><strong>Cimeterre :</strong> <code>+4 au touché</code>, dégâts <code>1d6 + 2 tranchant</code>.</p>
+            </section>
+
+            <section id="loup-ombre">
+                <h2>Loup d'Ombre <span class="badge gold">FP 1</span></h2>
+                <div class="stat-block">
+                    <div class="stat-item"><span class="label">PV</span><span class="value">22 (4d8+4)</span></div>
+                    <div class="stat-item"><span class="label">CA</span><span class="value">13</span></div>
+                    <div class="stat-item"><span class="label">Vitesse</span><span class="value">15 m</span></div>
+                    <div class="stat-item"><span class="label">FOR</span><span class="value">14 (+2)</span></div>
+                    <div class="stat-item"><span class="label">DEX</span><span class="value">15 (+2)</span></div>
+                </div>
+                <p><strong>Tacticien de Meute :</strong> Avantage aux jets d'attaque si un allié est à moins de 1.5m de la cible.</p>
+                <p><strong>Morsure :</strong> <code>+4 au touché</code>, dégâts <code>2d6 + 2 perforant</code>. La cible doit réussir un jet de Force DD 11 ou être jetée à terre.</p>
+            </section>
+
+            <section id="golem-pierre">
+                <h2>Golem de Pierre <span class="badge danger">FP 10</span></h2>
+                <div class="stat-block">
+                    <div class="stat-item"><span class="label">PV</span><span class="value">178 (17d10+85)</span></div>
+                    <div class="stat-item"><span class="label">CA</span><span class="value">17</span></div>
+                    <div class="stat-item"><span class="label">Vitesse</span><span class="value">9 m</span></div>
+                    <div class="stat-item"><span class="label">FOR</span><span class="value">22 (+6)</span></div>
+                    <div class="stat-item"><span class="label">DEX</span><span class="value">9 (-1)</span></div>
+                </div>
+                <p><strong>Immunité aux Sorts :</strong> Immunisé aux effets magiques non destructifs.</p>
+                <p><strong>Coup de Poing :</strong> <code>+10 au touché</code>, dégâts <code>3d8 + 6 contondant</code>.</p>
+            </section>
+        </main>
+    </div>
+
+    <script>
+    function filterContent(q) {
+        let text = q.toLowerCase();
+        document.querySelectorAll('.content section').forEach(sec => {
+            sec.style.display = sec.textContent.toLowerCase().includes(text) ? 'block' : 'none';
+        });
+    }
+    </script>
+</body>
+</html>

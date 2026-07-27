@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Magie - Codex JDR</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="site-title">🎲 Codex JDR</a>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="regles.html">📜 Règles</a></li>
+                <li><a href="magie.html" class="active">✨ Magie</a></li>
+                <li><a href="lore.html">🗺️ Lore</a></li>
+                <li><a href="bestiaire.html">🐉 Bestiaire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <input type="text" placeholder="🔍 Chercher un sort..." onkeyup="filterContent(this.value)">
+            <ul>
+                <li><a href="#regles-magie">Règles d'incantation</a></li>
+                <li><a href="#boule-de-feu">Boule de Feu</a></li>
+                <li><a href="#soins-mineurs">Soins Mineurs</a></li>
+                <li><a href="#bouclier-magique">Bouclier Arcanique</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h1>Grimoire des Sorts</h1>
+
+            <section id="regles-magie">
+                <h2>Composants & Incantation</h2>
+                <p>Les sorts nécessitent jusqu'à 3 types de composants :</p>
+                <p><span class="badge">V</span> Verbal (Incanté à voix haute) | <span class="badge">S</span> Somatique (Geste précis) | <span class="badge gold">M</span> Matériel (Focaliseur ou ingrédients)</p>
+            </section>
+
+            <section id="boule-de-feu">
+                <h2>Boule de Feu <span class="badge danger">Niveau 3</span></h2>
+                <div class="stat-block">
+                    <div class="stat-item"><span class="label">Écôle</span><span class="value">Évocation</span></div>
+                    <div class="stat-item"><span class="label">Portée</span><span class="value">45 mètres</span></div>
+                    <div class="stat-item"><span class="label">Zone</span><span class="value">Sphère 6m</span></div>
+                    <div class="stat-item"><span class="label">Composants</span><span class="value">V, S, M</span></div>
+                </div>
+                <p>Une explosion d'étincelles éclate. Chaque créature dans la zone subit <strong>8d6 dégâts de feu</strong> (jet de sauvegarde d'Agilité pour réduire les dégâts de moitié).</p>
+            </section>
+
+            <section id="soins-mineurs">
+                <h2>Soins Mineurs <span class="badge">Niveau 1</span></h2>
+                <div class="stat-block">
+                    <div class="stat-item"><span class="label">Écôle</span><span class="value">Maitrise</span></div>
+                    <div class="stat-item"><span class="label">Portée</span><span class="value">Contact</span></div>
+                    <div class="stat-item"><span class="label">Incanation</span><span class="value">1 Action</span></div>
+                    <div class="stat-item"><span class="label">Composants</span><span class="value">V, S</span></div>
+                </div>
+                <p>Une cible touchée regagne un nombre de points de vie égal à <strong>1d8 + Modificateur d'Incanation</strong>.</p>
+            </section>
+
+            <section id="bouclier-magique">
+                <h2>Bouclier Arcanique <span class="badge">Niveau 1</span></h2>
+                <div class="stat-block">
+                    <div class="stat-item"><span class="label">Écôle</span><span class="value">Abjuration</span></div>
+                    <div class="stat-item"><span class="label">Portée</span><span class="value">Personnelle</span></div>
+                    <div class="stat-item"><span class="label">Temps</span><span class="value">1 Réaction</span></div>
+                    <div class="stat-item"><span class="label">Durée</span><span class="value">1 Tour</span></div>
+                </div>
+                <p>Offre un bonus temporaire de <strong>+5 à la Classe d'Armure (CA)</strong> contre l'attaque déclencheuse et jusqu'au début de votre prochain tour.</p>
+            </section>
+        </main>
+    </div>
+
+    <script>
+    function filterContent(q) {
+        let text = q.toLowerCase();
+        document.querySelectorAll('.content section').forEach(sec => {
+            sec.style.display = sec.textContent.toLowerCase().includes(text) ? 'block' : 'none';
+        });
+    }
+    </script>
+</body>
+</html>

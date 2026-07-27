@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Basic, le jeu de rôle</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codex JDR - Accueil</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-  <header class="hero">
-    <h1>Basic,le jeu de rôle</h1>
-    <p>Un système de jeu simple, rapide et modulaire</p>
-  </header>
+    <header>
+        <nav>
+            <a href="index.html" class="site-title">🎲 Codex JDR</a>
+            <ul>
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="regles.html">📜 Règles</a></li>
+                <li><a href="magie.html">✨ Magie</a></li>
+                <li><a href="lore.html">🗺️ Lore</a></li>
+                <li><a href="bestiaire.html">🐉 Bestiaire</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main class="container">
+    <main style="max-width: 1200px; margin: 3rem auto; padding: 0 1.5rem;">
+        <h1 style="text-align: center; font-size: 2.5rem; margin-bottom: 0.5rem;">Grimoire & Codex de Partie</h1>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 3rem;">
+            Consultation rapide des données de jeu pour le Maître de Jeu et les Joueurs.
+        </p>
 
-    <section class="intro">
-      <h2>Bienvenue</h2>
-      <p>
-        Basic JDR est un système conçu pour jouer rapidement, créer facilement des aventures,
-        et adapter vos univers sans complexité inutile.
-      </p>
-    </section>
+        <div class="grid-cards">
+            <a href="regles.html" class="card">
+                <h2>📜 Règles de Jeu</h2>
+                <p>Système de combat, jets de dés, états de santé, repos et mécaniques principales.</p>
+            </a>
 
-    <section class="grid">
+            <a href="magie.html" class="card">
+                <h2>✨ Grimoire & Magie</h2>
+                <p>Liste des sorts, écoles de magie, incantations et composants arcaniques.</p>
+            </a>
 
-      <a class="card" href="rules.html">
-        <h3>📜 Règles</h3>
-        <p>Les mécaniques de base du jeu</p>
-      </a>
+            <a href="lore.html" class="card">
+                <h2>🗺️ Univers & Lore</h2>
+                <p>Géographie, histoire du monde, factions importantes et géopolitique.</p>
+            </a>
 
-      <a class="card" href="magic.html">
-        <h3>🧙 Magie</h3>
-        <p>Systèmes et sorts disponibles</p>
-      </a>
+            <a href="bestiaire.html" class="card">
+                <h2>🐉 Bestiaire & PNJ</h2>
+                <p>Fiches de monstres, statistiques de combat et caractéristiques des créatures.</p>
+            </a>
+        </div>
+    </main>
 
-      <a class="card" href="#">
-        <h3>🐉 Bestiaire</h3>
-        <p>Créatures et ennemis</p>
-      </a>
-
-      <a class="card" href="#">
-        <h3>🌍 Univers</h3>
-        <p>Le monde de jeu</p>
-      </a>
-
-    </section>
-
-  </main>
-
-  <footer>
-    <p>Basic JDR — Projet personnel</p>
-  </footer>
+    <footer>
+        <p>&copy; 2026 Codex JDR — Conçu pour un accès rapide en partie.</p>
+    </footer>
 
 </body>
 </html>
