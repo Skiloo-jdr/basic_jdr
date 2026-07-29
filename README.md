@@ -1,3 +1,3 @@
-# Bestiaire
+# Basic JDR
 
-Cette section est en cours de rédaction.
+Déposez ce dossier sur GitHub Pages.
