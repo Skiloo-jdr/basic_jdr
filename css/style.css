@@ -1,21 +1,65 @@
-*{box-sizing:border-box}body{margin:0;background:#1b1815;color:#f4f1ea;font-family:Arial,sans-serif}
-h1{text-align:center;padding:30px;color:#d5b06a}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;max-width:1000px;margin:30px auto;padding:20px}
-.tile{aspect-ratio:1;background:#2b2722;border:2px solid #5e4e38;border-radius:18px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-decoration:none;font-size:3rem;transition:.2s}
-.tile span{font-size:1.5rem;margin-top:16px}
-.tile:hover{transform:translateY(-5px);border-color:#d5b06a}
-.tile {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 1.4rem;
-    text-transform: uppercase;
+* {
+  box-sizing: border-box;
 }
-#content{max-width:1000px;margin:40px auto;padding:20px}
 body {
-    font-family: 'IM Fell English', serif;
-    background: #e8d7b0;
-    color: #2b1b0e;
+  margin: 0;
+  background: #1b1815;
+  color: #f4f1ea;
+  font-family: Arial, sans-serif;
 }
-h1, h2, h3 {
-    font-family: 'Cinzel Decorative', serif;
-    letter-spacing: 2px;
+h1 {
+  text-align: center;
+  padding: 30px;
+  color: #d5b06a;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+}
+.tile {
+  aspect-ratio: 1;
+  background: #2b2722;
+  border: 2px solid #5e4e38;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 3rem;
+  transition: 0.2s;
+}
+.tile span {
+  font-size: 1.5rem;
+  margin-top: 16px;
+}
+.tile:hover {
+  transform: translateY(-5px);
+  border-color: #d5b06a;
+}
+.tile {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+#content {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+body {
+  font-family: "IM Fell English", serif;
+  background: #e8d7b0;
+  color: #2b1b0e;
+}
+h1,
+h2,
+h3 {
+  font-family: "Cinzel Decorative", serif;
+  letter-spacing: 2px;
 }
