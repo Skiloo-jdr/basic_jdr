@@ -5,3 +5,12 @@ h1{text-align:center;padding:30px;color:#d5b06a}
 .tile span{font-size:1.5rem;margin-top:16px}
 .tile:hover{transform:translateY(-5px);border-color:#d5b06a}
 #content{max-width:1000px;margin:40px auto;padding:20px}
+body {
+    font-family: 'IM Fell English', serif;
+    background: #e8d7b0;
+    color: #2b1b0e;
+}
+h1, h2, h3 {
+    font-family: 'Cinzel Decorative', serif;
+    letter-spacing: 2px;
+}
