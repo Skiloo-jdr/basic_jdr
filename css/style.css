@@ -4,6 +4,11 @@ h1{text-align:center;padding:30px;color:#d5b06a}
 .tile{aspect-ratio:1;background:#2b2722;border:2px solid #5e4e38;border-radius:18px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-decoration:none;font-size:3rem;transition:.2s}
 .tile span{font-size:1.5rem;margin-top:16px}
 .tile:hover{transform:translateY(-5px);border-color:#d5b06a}
+.tile {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
 #content{max-width:1000px;margin:40px auto;padding:20px}
 body {
     font-family: 'IM Fell English', serif;
